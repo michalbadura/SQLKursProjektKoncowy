@@ -7,3 +7,16 @@ W takiej sytuacji musimy te informacje wywnioskować z danych.
 
 W tym celu napisz kwerendę, za pomocą której spróbujesz odpowiedzieć na pytanie, które statusy oznaczają pożyczki spłacone, a które oznaczają pożyczki niespłacone.
  */
+
+
+
+
+
+SELECT
+       status,
+       COUNT(*)
+FROM financial3_7.loan
+GROUP BY status;
+
+
+-- Po wynikach kwerendy widac, ze statusy A i C, to pozyczka splacona. Z kolei B oraz D, to nie.
